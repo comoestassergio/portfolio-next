@@ -17,10 +17,10 @@ const Custom500 = () => {
             exit={{y: '100%'}} 
             className="min-h-screen flex flex-col items-center justify-center gap-8">
                 <FaRobot className="text-7xl" />
-                <h1 className="text-3xl font-semibold uppercase">Oops, something went wrong...</h1>
+                <h1 className="text-3xl text-center font-semibold uppercase dark:bg-clip-text dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-transparent">Oops, something went wrong...</h1>
                 <p className="text-xl max-w-sm text-center">Errors occur sometimes, you can safely go back now</p>
                 <Link href={'/'}>
-                    <button className="btn btn-outline">Return home</button>
+                    <button className="btn btn-outline rounded-lg uppercase dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400">Return home</button>
                 </Link>
             </m.div>
         </>
