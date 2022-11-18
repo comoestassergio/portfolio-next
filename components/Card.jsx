@@ -14,7 +14,7 @@ export default function Card ({ id, name, homepage, topics, description, code })
             </figure>
             <div className="card-body gap-4 dark:bg-stone-900">
                 <Link href={`/project/${name.toLowerCase()}`} className='max-w-fit'>
-                    <h2 className="card-title capitalize hover:underline dark:text-stone-200">{cleanName}</h2>
+                    <h2 className="card-title capitalize hover:underline dark:bg-clip-text dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-transparent">{cleanName}</h2>
                 </Link>
                 <p className="dark:text-stone-400">{description}</p>
                 {topics &&
@@ -27,7 +27,7 @@ export default function Card ({ id, name, homepage, topics, description, code })
                 }
                 <div className="card-actions justify-end">
                 <Link href={`${homepage}`} target='_blank'>
-                    <button className="btn btn-primary dark:rounded-xl dark:uppercase">Open</button>
+                    <button className="btn btn-primary dark:rounded-xl dark:uppercase dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-transparent">Open</button>
                 </Link>
                 <Link href={`${code}`} target='_blank'>
                     <button className="btn btn-outline dark:rounded-xl dark:btn-ghost dark:uppercase">View Code</button>
