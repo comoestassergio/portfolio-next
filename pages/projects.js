@@ -29,7 +29,7 @@ export default function ProjectsPage({ data }){
             <m.div 
             initial={{opacity: 0, y: '-100%'}} 
             animate={{opacity: 1, y: '0%'}} 
-            transition={{ease: "easeOut", duration: 0.9}} 
+            transition={{ease: "easeOut"}} 
             exit={{y: '100%', opacity: 0}} 
             className="absolute w-full flex items-center justify-center pt-14"
             >
