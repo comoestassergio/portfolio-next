@@ -10,7 +10,7 @@ export default function Card ({ id, name, homepage, topics, description, code })
     return (
         <li key={id} className="card w-96 shadow-xl md:card-side md:w-auto dark:rounded-lg">
             <figure className="md:max-w-md md:mr-10">
-                <Image className=" scale-110" src={`/../public/static/img/${name}.png`} width={400} height={400} alt={name}/>
+                <Image className=" scale-110" src={`/../public/static/${name}.png`} width={400} height={400} alt={name}/>
             </figure>
             <div className="card-body gap-4 dark:bg-stone-900">
                 <Link href={`/project/${name.toLowerCase()}`} className='max-w-fit'>
