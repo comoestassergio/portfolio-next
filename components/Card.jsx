@@ -7,12 +7,12 @@ export default function Card ({el, id, name, homepage, topics, description, code
 
     const cleanName = name.split('-').join(' ')
 
-    const imgPath = `/../public/static/${name.toLowerCase()}.png`
+    const imgPath = `/images/${id}.png`
 
     return (
         <li key={id} className="card w-96 shadow-xl md:card-side md:w-auto dark:rounded-lg">
             <div className="relative w-auto h-80 md:h-80 md:w-80">
-                <Image className="object-cover" src={imgPath} fill={true} alt={name}/>
+                <Image className="object-cover" fill={true} src={imgPath} alt={name}/>
             </div>
             <div className="card-body gap-4 dark:bg-stone-900 md:w-96">
                 <Link href={`/project/${name.toLowerCase()}`} className='max-w-fit'>
