@@ -27,13 +27,13 @@ export default function ProjectsPage({ data }){
             </Head>
             
             <m.div 
-            initial={{opacity: 0, y: '-100%'}} 
-            animate={{opacity: 1, y: '0%'}} 
+            initial={{opacity: 0}} 
+            animate={{opacity: 1}} 
             transition={{ease: "easeOut"}} 
             exit={{y: '100%', opacity: 0}} 
-            className="absolute w-full flex flex-col items-center justify-center pt-14"
+            className="relative w-full flex flex-col items-center justify-center pt-14 lg:items-start lg:pt-40"
             >
-                <ul className="bg-base-100 flex flex-wrap-reverse flex-row-reverse justify-center items-start gap-5 py-5 md:flex-wrap-reverse md:max-w-2xl md:gap-7 lg:gap-10 lg:max-w-fit lg:grid lg:grid-cols-2 lg:grid-flow-row">
+                <ul className="bg-base-100 flex flex-wrap-reverse flex-row-reverse justify-center items-start gap-5 py-5 md:flex-wrap-reverse md:max-w-2xl md:gap-7 lg:flex-col-reverse lg:pl-32 lg:gap-12 lg:w-full lg:max-w-none lg:items-end">
                     {filteredData.map(el => (
                         <Card key={el.id} id={el.id} name={el.name} topics={el.topics} homepage={el.homepage} description={el.description} code={el.html_url}/>
                     ))}
