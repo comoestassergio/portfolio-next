@@ -38,7 +38,7 @@ export default function Contact(){
                             <BsGithub className="text-2xl lg:text-4xl" /> GitHub
                         </li>
                     </Link>
-                    <Link className=" col-span-2" href={'https://drive.google.com/file/d/1hEHCYhZ-Vx6J5POJc3zaa27MN9ZHvDab/view?usp=share_link'}>
+                    <Link className=" col-span-2" href={'https://drive.google.com/file/d/1mypqoDFwGTvgTOb3A3RsSN0kj7V1XPok/view?usp=share_link'}>
                         <li className="btn btn-secondary btn-outline h-20 rounded-lg flex flex-col gap-1 items-center text-lg capitalize lg:h-40">
                             <BiFileBlank className="text-2xl lg:text-4xl" /> resume
                         </li>
