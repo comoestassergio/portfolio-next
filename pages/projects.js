@@ -31,9 +31,9 @@ export default function ProjectsPage({ data }){
             animate={{opacity: 1}} 
             transition={{ease: "easeOut"}} 
             exit={{y: '100%', opacity: 0}} 
-            className="relative w-full flex flex-col items-center justify-center pt-14 lg:items-start lg:pt-40"
+            className="relative w-full flex flex-col items-center justify-center pt-[10vw] lg:items-start lg:pt-[5vw] "
             >
-                <ul className="bg-base-100 flex flex-wrap-reverse flex-row-reverse justify-center items-start gap-5 py-5 md:flex-wrap-reverse md:max-w-2xl md:gap-7 lg:flex-col-reverse lg:pl-32 lg:gap-12 lg:w-full lg:max-w-none lg:items-end">
+                <ul className="bg-base-100 flex flex-wrap-reverse flex-row-reverse justify-center items-start gap-5 py-5 px-5 md:flex-wrap-reverse md:max-w-2xl md:gap-7 lg:flex-col-reverse lg:pl-32 lg:gap-[5vw] lg:w-full lg:max-w-none lg:items-end">
                     {filteredData.map(el => (
                         <Card key={el.id} id={el.id} name={el.name} topics={el.topics} homepage={el.homepage} description={el.description} code={el.html_url}/>
                     ))}
