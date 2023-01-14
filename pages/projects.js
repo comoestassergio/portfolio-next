@@ -4,17 +4,13 @@ import axios from "axios";
 import {motion as m} from 'framer-motion'
 import Card from "../components/Card";
 
-export default function ProjectsPage({ data }){
+export default function ProjectsPage({ filteredData }){
 
     const [showContent, setShowContent] = useState(false)
 
     useEffect(() => {
         setShowContent(!showContent)
     }, [])
-    
-    const filteredData = data.filter(el => {
-        return el.topics.length > 0 && el.homepage !== '' && el.name !== 'comoestassergio'
-    })
 
     if (!showContent) {
         return <></>
@@ -47,9 +43,16 @@ export async function getStaticProps(){
     const repos = await axios.get('https://api.github.com/users/comoestassergio/repos')
     const data = repos.data
 
+    const filteredData = data.filter(el => {
+        return el.topics.length > 0 && el.homepage !== '' && el.name !== 'comoestassergio'
+    }).map(el => {
+        return {name: el.name, id: el.id, topics: el.topics, homepage: el.homepage, description: el.description, html_url: el.html_url}
+    })
+
+
     return {
         props: {
-            data
+            filteredData
         }
     }
 }
