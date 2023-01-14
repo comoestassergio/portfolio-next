@@ -7,7 +7,7 @@ const Hero = ({ firstName, lastName, title, text }) => {
     return (
         <m.div initial={{opacity: 0, scale: 0.8}} 
                 animate={{opacity: 1, scale: 1}} 
-                exit={{opacity: 0, scale: 0}}
+                exit={{opacity: 0}}
                 className="absolute h-full w-full flex flex-col justify-center pl-4 md:max-w-lg md:ml-16 lg:max-w-xl"
             >
                 <h1 className="text-5xl max-w-sm md:max-w-lg md:text-8xl lg:text-9xl lg:uppercase">
@@ -20,7 +20,7 @@ const Hero = ({ firstName, lastName, title, text }) => {
                 <div className="flex items-center mt-8 gap-2">
 
                     <Link href={'/projects'}>
-                        <button className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 uppercase dark:shadow-none dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 lg:w-80">See my projects</button>
+                        <button className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 uppercase dark:shadow-none dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-purple-200 lg:w-80">See my projects</button>
                     </Link>
                     <Link href={'/contact'}>
                         <button className="btn btn-ghost rounded-lg uppercase lg:w-48">Contact</button>
