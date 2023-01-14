@@ -3,6 +3,8 @@ import Head from "next/head";
 import axios from "axios";
 import {motion as m} from 'framer-motion'
 import Card from "../components/Card";
+import Footer from "../components/Footer";
+import siteMetadata from "../data/siteMetadata";
 
 export default function ProjectsPage({ filteredData }){
 
@@ -19,7 +21,7 @@ export default function ProjectsPage({ filteredData }){
     return (
         <>
             <Head>
-                <title>projects | comoestassergio</title>
+                <title>projects | {siteMetadata.name}</title>
             </Head>
             
             <m.div 
@@ -34,6 +36,7 @@ export default function ProjectsPage({ filteredData }){
                         <Card key={el.id} id={el.id} name={el.name} topics={el.topics} homepage={el.homepage} description={el.description} code={el.html_url}/>
                     ))}
                 </ul>
+                <Footer />
             </m.div>
         </>
     )
