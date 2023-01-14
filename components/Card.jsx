@@ -29,7 +29,7 @@ export default function Card ({el, id, name, homepage, topics, description, code
                 }
                 <div className="card-actions justify-end">
                     <Link href={`${homepage}`} target='_blank'>
-                        <button className="btn btn-primary dark:rounded-xl dark:uppercase dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-purple-200">Live Preview</button>
+                        <button className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 dark:rounded-xl dark:uppercase dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-purple-200">Live Preview</button>
                     </Link>
                     <Link href={`${code}`} target='_blank'>
                         <button className="btn btn-outline dark:rounded-xl dark:btn-ghost dark:uppercase">View Code</button>

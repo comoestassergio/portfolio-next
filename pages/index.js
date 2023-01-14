@@ -1,27 +1,21 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
+import authorInfo from '../data/authorInfo'
+import siteMetadata from '../data/siteMetadata'
 
 export default function Home() {
-
-  const info = {
-    firstName: 'Sergey',
-    lastName: 'Chernyavskiy',
-    title: 'Front-end Developer',
-    text: "I'm a web dev based in Russia. Wanna make a cool web app or create a stunning design? Hit me up, I'd love to connect."
-  }
-  
 
   return (
     <>
       <Head>
-        <title>comoestassergio</title>
+        <title>{siteMetadata.name}</title>
       </Head>
 
       <Hero
-        firstName={info.firstName}
-        lastName={info.lastName}
-        title={info.title}
-        text={info.text}
+        firstName={authorInfo.firstName}
+        lastName={authorInfo.lastName}
+        title={authorInfo.title}
+        text={authorInfo.description}
       />
     </>
   )
