@@ -16,23 +16,23 @@ export default function Card ({el, id, name, homepage, topics, description, code
             </div>
             <div className="card-body gap-4 dark:bg-stone-900 md:w-[50%] lg:h-[50vh]">
                 <Link href={`/project/${name.toLowerCase()}`} className='max-w-fit'>
-                    <h2 className="card-title capitalize hover:underline dark:bg-clip-text dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-transparent">{cleanName}</h2>
+                    <h2 className="card-title capitalize hover:underline dark:bg-clip-text dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-transparent">{cleanName}</h2>
                 </Link>
                 <p className="dark:text-stone-400">{description}</p>
                 {topics &&
                     <ul className="flex flex-wrap min-w-xs gap-2 mb-3">
                         {topics.map(el => (
-                            <li key={uniqid()} className="px-4 py-2 bg-base-300 rounded-lg dark:rounded-xl dark:text-stone-300 dark:bg-stone-800">{el}</li>
+                            <li key={uniqid()} className="px-4 py-2 bg-base-300 rounded-lg dark:rounded-lg dark:text-stone-300 dark:bg-stone-800">{el}</li>
                         ))
                         }
                     </ul>
                 }
                 <div className="card-actions justify-end">
                     <Link href={`${homepage}`} target='_blank'>
-                        <button className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 dark:rounded-xl dark:uppercase dark:bg-gradient-to-r dark:from-fuchsia-400 dark:to-purple-400 dark:text-purple-200">Live Preview</button>
+                        <button className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 dark:rounded-lg dark:uppercase dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-purple-200">Live Preview</button>
                     </Link>
                     <Link href={`${code}`} target='_blank'>
-                        <button className="btn btn-outline dark:rounded-xl dark:btn-ghost dark:uppercase">View Code</button>
+                        <button className="btn btn-outline dark:rounded-lg dark:btn-ghost dark:uppercase">View Code</button>
                     </Link>
                 </div>
             </div>
