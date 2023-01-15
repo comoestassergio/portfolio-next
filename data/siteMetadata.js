@@ -3,6 +3,7 @@ const siteMetadata = {
     name: 'comoestassergio',
     github: `https://github.com/comoestassergio`, 
     telegram:'https://t.me/comoestassergio',
+    linkedIn: 'https://www.linkedin.com/in/sergey-chernyavskiy-5ab15024b/'
 }
 
 export default siteMetadata

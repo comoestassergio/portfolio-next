@@ -3,7 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import {motion as m} from 'framer-motion'
 import {BsTelegram} from 'react-icons/bs'
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import {BiFileBlank} from 'react-icons/bi'
 
 import siteMetadata from "../data/siteMetadata";
@@ -35,8 +35,13 @@ export default function Contact(){
                             <BsGithub className="text-2xl lg:text-4xl" /> GitHub
                         </li>
                     </Link>
-                    <Link className=" col-span-2" href={siteMetadata.resumeLink}>
-                        <li className="btn btn-secondary btn-outline h-20 rounded-lg flex flex-col gap-1 items-center text-lg capitalize dark:border-fuchsia-400/50 lg:h-40">
+                    <Link href={siteMetadata.linkedIn} target='_blank'>
+                        <li className="btn btn-outline h-20 rounded-lg flex flex-col gap-1 items-center text-lg capitalize dark:hover:bg-gradient-to-r dark:hover:from-fuchsia-400 dark:hover:to-purple-400 dark:hover:border-purple-400 lg:h-48 lg:w-48">
+                            <BsLinkedin className="text-2xl lg:text-4xl" /> LinkedIn
+                        </li>
+                    </Link>
+                    <Link className="" href={siteMetadata.resumeLink}>
+                        <li className="btn btn-secondary btn-outline h-20 rounded-lg flex flex-col gap-1 items-center text-lg capitalize dark:border-fuchsia-400/50 lg:h-48">
                             <BiFileBlank className="text-2xl lg:text-4xl dark:text-fuchsia-400" />
                             <span className="dark:text-fuchsia-400">resume</span> 
                         </li>
