@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import uniqid from 'uniqid'
+import {motion as m} from 'framer-motion'
 
 export default function Card ({el, id, name, homepage, topics, description, code }) {
 
@@ -10,7 +11,13 @@ export default function Card ({el, id, name, homepage, topics, description, code
     const imgPath = `/images/${id}.png`
 
     return (
-        <li key={id} className={`card w-full max-w-full shadow-xl border-[0.5px] border-gray-200/50 md:card-side md:max-w-2xl dark:border-none dark:rounded-lg lg:max-w-5xl relative`}>
+        <m.li 
+            initial={{scale: 0, opacity: 0}} 
+            animate={{scale: 1, opacity: 1}} 
+            transition={{ease: "easeOut"}} 
+            exit={{ scale: 0, opacity: 0 }}  
+            key={id} 
+            className={`card w-full max-w-full shadow-xl border-[0.5px] border-gray-200/50 md:card-side md:max-w-2xl dark:border-none dark:rounded-lg lg:max-w-5xl relative`}>
             <div className="relative w-auto h-80 md:h-80 md:w-80 lg:h-auto lg:w-3/4">
                 <Image className="object-cover" fill={true} src={imgPath} alt={name}/>
             </div>
@@ -36,6 +43,6 @@ export default function Card ({el, id, name, homepage, topics, description, code
                     </Link>
                 </div>
             </div>
-        </li>
+        </m.li>
     )
 }
