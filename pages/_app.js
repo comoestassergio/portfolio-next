@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps, router }) {
         <link rel="manifest" href="/site.webmanifest"/>
       </Head>
       <Layout>
-        <AnimatePresence>
+        <AnimatePresence mode='wait'>
           <Component key={router.pathname} {...pageProps} />
         </AnimatePresence>
       </Layout>
