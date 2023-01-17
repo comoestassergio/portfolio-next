@@ -32,7 +32,7 @@ export default function Card ({ id, name, homepage, topics, description, html_ur
                 <Image className="object-cover" fill={true} src={imgPath} alt={name}/>
             </div>
             <div className="card-body gap-4 dark:bg-stone-900 md:w-[50%] lg:h-[50vh]">
-                <h2  className="card-title capitalize dark:bg-clip-text dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-transparent">{cleanName}</h2>
+                <h2  className="card-title font-bold capitalize dark:bg-clip-text dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-transparent">{cleanName}</h2>
                 <p className="dark:text-stone-400">{description}</p>
                 {topics &&
                     <ul className="flex flex-wrap min-w-xs gap-2 mb-3">
