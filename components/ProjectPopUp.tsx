@@ -24,7 +24,7 @@ export default function ProjectPopUp ({ projects, readMes }: ProjectPopUpProps) 
         <>
             <input type="checkbox" id="project-modal" className="modal-toggle" />
                 <label  htmlFor="project-modal" className="modal cursor-pointer">
-                    <label className="modal-box relative overflow-y-auto md:max-w-3xl lg:flex lg:items-center lg:gap-3 lg:max-w-5xl dark:rounded-lg" htmlFor="">
+                    <label className="modal-box relative overflow-y-auto md:max-w-3xl lg:flex lg:items-center lg:gap-6 lg:max-w-5xl dark:rounded-lg" htmlFor="">
                         {project &&
                             <div className="relative w-auto h-80 mb-5 md:h-96 lg:w-[50vw] lg:h-[50vh] lg:max-h-sm">
                                 <Image className="object-cover rounded-xl" fill={true} src={`/images/${currentProject?.id}.png`} alt={currentProject?.name}/>
