@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Project, ReadMe } from "../pages/projects";
 import ReactMarkdown from "react-markdown";
-import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 
@@ -13,15 +12,12 @@ type ProjectPopUpProps = {
 
 export default function ProjectPopUp ({ projects, readMes }: ProjectPopUpProps) {
 
-    const [markdown, setMarkdown] = useState<string | null>(null)
-    const [error, setError] = useState<boolean>(false)
-
     const router = useRouter()
     const { project } = router.query
 
-    const currentProject = projects.find(el => el.id.toString() === project)
+    const currentProject = projects.find(el => el?.id?.toString() === project)
 
-    const currentReadme = readMes.find(el => el.id.toString() === project)?.markdown
+    const currentReadme = readMes.find(el => el?.id?.toString() === project)?.markdown
 
 
     return (
@@ -34,8 +30,8 @@ export default function ProjectPopUp ({ projects, readMes }: ProjectPopUpProps) 
                                 <Image className="object-cover rounded-xl" fill={true} src={`/images/${currentProject?.id}.png`} alt={currentProject?.name}/>
                             </div>
                         }
-                        {currentReadme && 
-                            <div className="flex flex-col max-w-full lg:max-w-md">
+                        <div className="flex flex-col max-w-full lg:max-w-md">
+                            {currentReadme &&
                                 <ReactMarkdown 
                                     children={currentReadme} 
                                     components={{
@@ -49,17 +45,17 @@ export default function ProjectPopUp ({ projects, readMes }: ProjectPopUpProps) 
                                         p: ({node, ...props}) => <p className="text-lg opacity-75 leading-[200%] my-3" {...props} />
                                     }}
                                 />
-                                <div className="flex justify-end gap-3 mt-5 lg:mt-10">
-                                    <Link href={`${currentProject.homepage}`} target='_blank' className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 dark:rounded-lg dark:uppercase dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-purple-200">
-                                        Live Preview
-                                    </Link>
-                                    <Link href={`${currentProject.html_url}`} target='_blank' className="btn btn-outline dark:rounded-lg dark:btn-ghost dark:uppercase">
-                                        View Code
-                                    </Link>
-                                </div>
+                            }
+                            <div className="flex justify-end gap-3 mt-5 lg:mt-10">
+                                <Link href={`${currentProject?.homepage}`} target='_blank' className="btn btn-secondary rounded-lg shadow-lg shadow-secondary/50 dark:rounded-lg dark:uppercase dark:animate-gradient-glow dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400 dark:text-purple-200">
+                                    Live Preview
+                                </Link>
+                                <Link href={`${currentProject?.html_url}`} target='_blank' className="btn btn-outline dark:rounded-lg dark:btn-ghost dark:uppercase">
+                                    View Code
+                                </Link>
                             </div>
-                            
-                        }
+                        </div>
+                        
                         
                     </label>
             </label>
