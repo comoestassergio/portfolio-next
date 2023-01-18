@@ -5,6 +5,8 @@ import React from 'react'
 
 import { AnimatePresence } from 'framer-motion'
 
+import { Analytics } from '@vercel/analytics/react';
+
 export default function MyApp({ Component, pageProps, router }) {
 
   return (
@@ -20,6 +22,7 @@ export default function MyApp({ Component, pageProps, router }) {
           <Component key={router.pathname} {...pageProps} />
         </AnimatePresence>
       </Layout>
+      <Analytics />
     </>
   )
 }
